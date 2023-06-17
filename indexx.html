@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-reboot.css">
+  <link rel="stylesheet" href="css/index-header.css">
+  <link rel="stylesheet" href="css/index-body.css">
+  <link rel="stylesheet" href="css/index-footer.css">
+  <style>
+    .navbar.nav-item {
+      background-color: #141414 !important;
+  
+      
+    }
+  </style>
+</head>
+<body onload="loadMovieLists()">
+
+  <!-- header: navbar -->
+  <section class="header">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="netflix-logo-circle-png-5.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Movies</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">TV Shows</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Latest</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">My List</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+  </section>
+
+  
+  <!-- main contents -->
+  <section class="main-contents">
+    <div id="movies">
+    
+    </div>
+
+
+     
+
+       
+
+       
+
+       
+       
+        
+    
+
+
+    
+    </div>
+  </section>
+
+  
+  <!-- footer -->
+  <section class="footer">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <img class="social-logo" src="faceebokk (1).jpeg" alt="">
+          <img class="social-logo" src="twitter.jpeg" alt="">
+          <img class="social-logo" src="youbtubee.jpeg" alt="">
+          <img class="social-logo" src="instaa.jpeg" alt="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <ul>
+            <li><a href="#">Audio and subtitles</a></li>
+            <li><a href="#">Media Center</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <ul>
+            <li><a href="#">Audio and subtitles</a></li>
+            <li><a href="#">Media Center</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <ul>
+            <li><a href="#">Audio and subtitles</a></li>
+            <li><a href="#">Media Center</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <ul>
+            <li><a href="#">Audio and subtitles</a></li>
+            <li><a href="#">Media Center</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <button class="btn-service-code">Service Code</button>
+      <div class="copyright">copyright blah blah blah ....</div>
+    </div>
+
+  </section>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script>
+
+  function loadMoiveLists(){
+
+    const movieLists=[
+    {
+      "title":"My List >",
+      "items":[
+      {
+        "thumbnail":"C:\Users\jonty\Desktop\netflix\littlethingssss.jpg",
+        "title":"Little Things",
+        "season":"Season 1",
+        "age":"18+",
+        "genre":"love ,Fantasy",
+      },
+      //{
+       // "thumbnail":"mismatched.jpg",
+        //"title":"Mismatched",
+        //"season":"Season 1, Season 2",
+        //"age":"16+",
+        //"genre":"Comdey,Love",
+      //},
+      //{
+        //"thumbnail":"",
+        //"title":"",
+        //"season":"",
+        //"age":"",
+        //"genre":"",
+      //},
+      //{
+       /// "thumbnail":"",
+        //"title":"",
+        //"season":"",
+        //"age":"",
+        //"genre":"",
+     // },
+      
+      ]
+    }
+    ]
+
+    let items=''
+
+    for(let index=0;index < movieLists.length;index++){
+      items+=`<div class="movie-list">`
+      const list= movieLists[index]
+      items+=`<div class="movie-slider-type">${list["title"]}</div>`
+      const movies=list["items"]
+      items+=`<ul class="movie-slider-1">`
+      for(let movieIndex=0;movieIndex<movies.length;movieIndex++){
+        const movie=movies[movieIndex]
+
+        items+=` <li>
+                <div class="movie-slider-item">
+                  <img src="${movie['C:\Users\jonty\Desktop\netflix\littlethingssss.jpg']}" alt="">
+                  <div class="controls">
+                    <button class="btn-control btn-control-1"><img src="images/icon-voice.png" alt=""></button> 
+                    <button class="btn-control btn-control-2"><img src="images/icon-thumbs_up.png" alt=""></button> 
+                    <button class="btn-control btn-control-3"><img src="images/icon-thumbs_down.png" alt=""></button> 
+                    <button class="btn-control btn-control-4"><img src="images/icon-checkmark.png" alt=""></button> 
+                    <img class="play" src="images/icon-circled_play.png" alt="">
+                    <div class="title">${movie['title']}</div>
+                    <div class="age">${movie['age']} <span>${movie['season']}</span></div>
+                    <div class="genre">${movie['genre']}</div>
+                  </div>
+                </div>
+              </li>
+          `
+
+
+
+
+      }
+      items+=`</ul>`
+      items +=`</div>`
+    }
+
+    $('#movies').html(items)
+  }
+
+
+  </script>
+</body>
+</html>

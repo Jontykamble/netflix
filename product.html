@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+
+    <style>
+
+        div.product{
+
+            border: solid black;
+            border-radius: 10px;
+            overflow: hidden;
+            display: inline-block;
+            
+
+        }
+    </style>  
+</head>
+<body onload="loadProduct()">
+
+    <div class="container">
+
+
+        <h1>Products</h1>
+
+        <div id="products">
+            <div class="row">
+
+            </div>
+    
+
+       
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+
+        function loadProduct(){
+
+            const items=[{
+                "thumbnail":"dark.jpg",
+                "title":"asrock",
+                "price":"7600"
+            } 
+            ]
+
+            let products=''
+            for(let index=0;index<items.length;index++){
+                const product=items[index]
+
+                console.log(`thumbnail=${product["thumbnail"]}`)
+                console.log(`title=${product["title"]}`)
+                console.log(`price=${product["price"]}`)
+                
+               //products+= `<div class="product">
+                //<img src="" alt="">
+                //<div class="title">ASRock h3v Intel</div>
+                //<div class="company">ASROCK</div>
+//<div class="price">INR 7500</div>
+            //</div>`
+ 
+          //  }
+            $('#products').html(products)
+        }
+    </script>
+</body>
+
+</html>

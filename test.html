@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+
+    <style>
+
+        .item{
+
+
+        background-color:red;
+        margin: 10px;
+        height: 100px;
+        width: 100px;
+        display: inline-block;
+        color: white;
+        font-size: 25px;
+        line-height: 100px;
+        text-align: center; 
+
+        }
+
+        .item .title{
+            height: 40px;
+        }
+    </style>
+</head>
+<body onload="loadMovies()">
+    
+
+    <div id="movies">
+
+
+    </div>
+
+
+    <script src="js/jquery.min.js"></Script>
+        <script>
+        function loadMovies(){
+           // let movies=``
+            //for(let index=0;index<100;index++){
+              //  movies+=`<div class="item">${index+1}</div>`
+            //}
+
+           
+
+                const movies=[
+                    'movie 1','movie 2','movie 3','movie 4','movie 5',
+                    'movie 1','movie 2','movie 3','movie 4','movie 10',
+                ]
+                let moviesItem=''
+
+                for(let index=0;index< movies.length;index++){
+                    moviesItem+=`
+                    <div class="item">
+                        <div class="title">${movies[index]}</div>
+                    <button>button${index}</button>
+                    </div>`
+
+                }
+
+                console.log(moviesItem)
+
+                 $('#movies').html(moviesItem)
+
+        }
+
+      
+    </script>
+</body>
+</html>
